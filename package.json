@@ -1,12 +1,12 @@
 {
   "name": "test-styled-jsx-comps-library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "dev": "next",
     "clean-dist": "rm -rf ./dist",
-    "build": "yarn run clean-dist && `yarn bin`/babel ./components --out-dir ./dist"
+    "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./components --out-dir ./dist"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +14,19 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "next": "^5.0.1-canary.17",
     "node-sass": "^4.9.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "styled-jsx": "^2.2.6",
     "styled-jsx-plugin-sass": "^0.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-jsx": "^2.2.6"
   }
 }

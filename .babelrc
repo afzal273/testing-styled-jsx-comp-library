@@ -1,21 +1,32 @@
 {
-  "presets": [
-    [
-      "next/babel",
-      {
-        "styled-jsx": {
-          "optimizeForSpeed": false,
-          "plugins": [
-            [
-              "styled-jsx-plugin-sass", {
-              "sassOptions": {
-                "includePaths": [ "./styles/" ],
-                "precision": 8,
-              }
-            }],
-          ]
-        }
-      }
-    ]
-  ]
+  "env" : {
+    "production": {
+      "presets": ["es2015", "react", "stage-1"]
+    },
+    "development": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "styled-jsx": {
+              "optimizeForSpeed": false,
+              "plugins": [
+                [
+                  "styled-jsx-plugin-sass",
+                  {
+                    "sassOptions": {
+                      "includePaths": [
+                        "./components/styles/"
+                      ],
+                      "precision": 8
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      ]
+    }
+  }
 }

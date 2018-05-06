@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/buttons-working';
+import styles from './styles/buttons-working';
 
 
 const RdcButton = ({ children, ...rest }) => (

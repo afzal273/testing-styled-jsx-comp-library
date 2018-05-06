@@ -3,4 +3,4 @@ out
 .next
 yarn.lock
 .idea
-
+yarn-error.log
